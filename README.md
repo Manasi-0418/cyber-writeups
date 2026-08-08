@@ -1,21 +1,131 @@
-# Cybersecurity Coursework & Writeups
+# HTB Starting Point — Sequel (MySQL/MariaDB Enumeration)
 
-Notes, lab writeups, and HackTheBox machine writeups from my cybersecurity coursework and HTB practice.
+### **1. Service Discovery**
 
-## Contents
+nmap -sV <target-ip>
 
-- **[htb-writeups/](htb-writeups/)** — HackTheBox machine writeups
-- **[labs/](labs/)** — Ethical Hacking fundamentals course: recon, scanning, enumeration (16 modules)
-- **[ctf-writeups/](ctf-writeups/)** — CTF challenge writeups
+**Purpose:** Discover open ports and identify the MySQL/MariaDB service version.
 
-## HTB Progress
+### **2. Connect to MySQL**
 
-Tier 0 complete: Meow, Fawn, Dancing, Sequel, Redeemer
+mysql -h <target-ip> -u root
 
-HTB profile: [cybergazeee04](https://app.hackthebox.com/profile/cybergazeee04)
+If SSL error occurs:
 
-## About
+mysql -h <target-ip> -u root --ssl=0
 
-MSc Cybersecurity student, building toward a Cloud Security Analyst role.
+**Purpose:** Connect to the remote MySQL server.
 
-Portfolio: [manasi-0418.github.io/manasi-portfolio](https://manasi-0418.github.io/manasi-portfolio/)
+### **3. Display Available Databases**
+
+SHOW DATABASES;
+
+**Purpose:** Lists all databases on the server.
+
+### **4. Select a Database**
+
+USE <database_name>;
+
+**Example:**
+
+USE htb;
+
+**Purpose:** Switches to the selected database.
+
+### **5. Display Tables**
+
+SHOW TABLES;
+
+**Purpose:** Lists all tables inside the selected database.
+
+### **6. Display Table Structure**
+
+DESCRIBE <table_name>;
+
+or
+
+DESC <table_name>;
+
+**Example:**
+
+DESCRIBE config;
+
+**Purpose:** Shows column names, data types, keys, and attributes.
+
+### **7. Display All Data from a Table**
+
+SELECT * FROM <table_name>;
+
+**Example:**
+
+SELECT * FROM config;
+
+**Purpose:** Retrieves all rows and columns.
+
+### **8. Display Specific Columns**
+
+SELECT username,password FROM users;
+
+**Purpose:** Retrieves only the specified columns.
+
+### **9. Count Records**
+
+SELECT COUNT(*) FROM <table_name>;
+
+**Example:**
+
+SELECT COUNT(*) FROM users;
+
+**Purpose:** Counts total records in a table.
+
+### **10. Display Current Database**
+
+SELECT DATABASE();
+
+**Purpose:** Shows the currently selected database.
+
+### **11. Display Current User**
+
+SELECT USER();
+
+**Purpose:** Shows the account currently connected.
+
+### **12. Exit MySQL**
+
+EXIT;
+
+or
+
+QUIT;
+
+**Purpose:** Closes the MySQL session.
+
+## **Typical HTB Workflow**
+
+nmap -sV <target-ip>
+
+mysql -h <target-ip> -u root --ssl=0
+
+SHOW DATABASES;
+
+USE htb;
+
+SHOW TABLES;
+
+DESCRIBE config;
+
+SELECT * FROM config;
+
+EXIT;
+
+## **Important Commands to Remember**
+
+| **Command** | **Purpose** |
+| --- | --- |
+| SHOW DATABASES; | List databases |
+| USE dbname; | Select database |
+| SHOW TABLES; | List tables |
+| DESCRIBE table; | Show table structure |
+| SELECT * FROM table; | Display all data |
+| SELECT USER(); | Show current user |
+| EXIT; | Exit MySQL |
