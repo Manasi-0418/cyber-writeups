@@ -216,23 +216,23 @@ Tool :- [https://crackstation.net/](https://crackstation.net/)
 
 Flag- WBA{C17_flag_admin}
 
-C18 - After completing her internship, ** Nikita Gaikwad** received an offer from an institute named **NITS**, located in **Nashik** — the same place where ex-trainer **Aman Gupta** once worked. Your task is to uncover the **salary amount** offered to her by NITS after her internship. Use only publicly available sources and digital traces. 
+C18 - After completing her internship, ** --------** received an offer from an institute named **NITS**, located in **Nashik** — the same place where ex-trainer **-------** once worked. Your task is to uncover the **salary amount** offered to her by NITS after her internship. Use only publicly available sources and digital traces. 
 
 Flag-- WBA{C18_flag_1000000} 
 
 Ans:- 
 
-Search in browser - "nikita gaikwad" "nits" "mrs. mrunal a. dhahale"
+Search in browser - "********" "nits" "********"
 
 Flag - WBA{C18_flag_180000}
 
-C19 - While mapping the leadership of NITS, your focus shifts to **Mrs. Mrunal A. Dhahale**, the Director of the institute. Through internal and ethical sources, you gain access to a partially redacted phone number — only the last three digits are visible: **055**. Your mission is to identify her **full  PRIVATE  contact number** used for communication, strictly for OSINT training purposes and with prior consent. FLAG- WBA{C19_flag_XXXXXXX055} 
+C19 - While mapping the leadership of NITS, your focus shifts to **---------**, the Director of the institute. Through internal and ethical sources, you gain access to a partially redacted phone number — only the last three digits are visible: **055**. Your mission is to identify her **full  PRIVATE  contact number** used for communication, strictly for OSINT training purposes and with prior consent. FLAG- WBA{C19_flag_XXXXXXX055} 
 
 Ans:- 
 
-Search on browser–"055" "nits" "mrs. mrunal a. Dhahale"
+Search on browser–"055" "nits" "*********"
 
-Flag— WBA{C19_flag_9273735055}
+Flag— WBA{C19_flag_*********}
 
 C20-While analyzing suspicious network activity from a compromised machine, your team detected an outgoing connection to the IP address 106.213.80.208. As part of the initial reconnaissance phase, your task is to perform OSINT (Open Source Intelligence) and determine which organization owns or is responsible for this IP address. This challenge will test your ability to use public tools and databases to trace IP ownership. You must find the registered organization name associated with the IP and submit it in the required flag format. WBA{C20_flag_Aaaaa_Aaaaa_Aaa} 
 
